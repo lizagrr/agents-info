@@ -11,26 +11,12 @@ import { useRoute } from 'vue-router'
 import axios from 'axios'
 import SortingAgent from './SortingAgent.vue'
 import router from '@/router/index.ts'
+import { useAgentsStore } from '@/stores/agent.ts'
 
-const route = useRoute()
-const allAgents = ref<any[]>([])
-const roleName = computed(() => route.params.role as string)
 
-const agents = computed(() => {
-  return allAgents.value.filter(
-    agent => agent.role?.displayName === roleName.value
-  )
-})
+const { roleName } = useAgentsStore()
+const { agents } = useAgentsStore()
 
-function fetchData() {
-  axios.get('https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=ru-RU')
-    .then(response => {
-      allAgents.value = response.data.data
-    })
-    .catch(error => {
-      console.error('Ошибка:', error)
-    })
-}
 
 function goToAgentDetail(agentId: string) {
   console.log('Переход к агентам с ролью:', roleName)
@@ -38,6 +24,5 @@ function goToAgentDetail(agentId: string) {
 }
 
 onMounted(() => {
-  fetchData()
 })
 </script>

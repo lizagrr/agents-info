@@ -18,7 +18,7 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/agents/:id',
+      path: '/agents/detail/:id',
        name: 'agentDetail',
       component: AgentCardView,
       props: true

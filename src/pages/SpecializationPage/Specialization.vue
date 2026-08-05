@@ -29,14 +29,9 @@
             </v-col>
           </v-row>
         </v-container>
-        {{ useAgentsStore().allAgents + 'asedaw' }}
 </template>
 
 <script setup lang="ts">
-import { useAgentsStore } from '@/stores/agent';
-
-
-
 const emit = defineEmits<{
   (e: 'selectRole', roleName: string): void
 }>()

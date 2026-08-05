@@ -88,10 +88,11 @@
 </template>
 
 <script setup lang="ts">
+import type { Agent } from '@/stores/agent';
 import { ref, computed } from 'vue'
 
 const props = defineProps<{
-  agent: any
+  agent: Agent
 }>()
 
 const selectedAbilityIndex = ref(0)
