@@ -6,9 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
-import axios from 'axios'
+import { onMounted } from 'vue'
 import SortingAgent from './SortingAgent.vue'
 import router from '@/router/index.ts'
 import { useAgentsStore } from '@/stores/agent.ts'
@@ -19,7 +17,6 @@ const { agents } = useAgentsStore()
 
 
 function goToAgentDetail(agentId: string) {
-  console.log('Переход к агентам с ролью:', roleName)
   router.push({ name: 'agentDetail', params: { id: agentId } })
 }
 

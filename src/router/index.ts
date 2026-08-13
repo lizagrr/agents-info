@@ -24,9 +24,9 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/qwe',
-       name: 'qwe',
-      component: ()=>import('@/pages/qwe.vue'),
+      path: '/help',
+       name: 'all',
+      component: ()=>import('@/pages/HelpChoiceAgent/HelpChoiceAgentView.vue'),
       props: true
     },
 

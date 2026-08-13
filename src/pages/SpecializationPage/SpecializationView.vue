@@ -6,8 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios'
-import { ref, onMounted, computed } from 'vue'
+import { onMounted } from 'vue'
 import Specialization from './Specialization.vue'
 import { useRouter } from 'vue-router'
 import { useAgentsStore } from '@/stores/agent.ts'
@@ -17,11 +16,12 @@ const router = useRouter()
 
 const {roleNames} = storeToRefs(useAgentsStore())
 
-
-
 function goToAgents(roleName: string) {
-  console.log('Переход к агентам с ролью:', roleName)
-  router.push({ name: 'agents', params: { role: roleName } })
+  if (roleName === "all") {
+    router.push({ name: 'all' })
+  } else {
+    router.push({ name: 'agents', params: { role: roleName } })
+  }
 }
 
 onMounted(() => {
