@@ -13,6 +13,11 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "axios": "^1.18.1",
+<<<<<<< HEAD
+=======
+    "dotenv": "^17.4.2",
+    "openai": "^7.5.0",
+>>>>>>> 3446e20 (feat: add maps and add ai answer)
     "pinia": "^3.0.4",
     "vite-plugin-vuetify": "^2.1.3",
     "vue": "^3.5.38",

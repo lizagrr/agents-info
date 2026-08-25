@@ -60,4 +60,17 @@ function toggleAgent(agentId: string) {
 function isAgentSelected(agentId: string): boolean {
   return selectedAgents.value.has(agentId)
 }
+<<<<<<< HEAD
+=======
+
+function handleMapSelection(selectedMapIds: string[]) {
+  selectedMaps.value = new Set(selectedMapIds)
+  emit('updateSelectedMaps', selectedMapIds)
+}
+
+function handleResponse(response: string) {
+  emit('updateSelectedMaps', selectedMapsArray.value) 
+}
+
+>>>>>>> 3446e20 (feat: add maps and add ai answer)
 </script>
