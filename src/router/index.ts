@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import SpecializationView from '@/pages/SpecializationPage/SpecializationView.vue'
 import SortingAgentView from '@/pages/SortingPage/SortingAgentView.vue'
 import AgentCardView from '@/pages/AgentCardPage/AgentCardView.vue'
+import qwe from '@/pages/qwe.vue'
+import zxc from '@/pages/zxc.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,9 +31,16 @@ const router = createRouter({
       component: ()=>import('@/pages/HelpChoiceAgent/HelpChoiceAgentView.vue'),
       props: true
     },
-
-
-    
+    {
+      path: '/qwe',
+      name: 'qwe',
+      component: qwe,
+    },
+    {
+      path: '/zxc',
+      name: 'zxc',
+      component: zxc,
+    },
   ],
 })
 

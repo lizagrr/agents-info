@@ -6,9 +6,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import vuetify from 'vite-plugin-vuetify'
 // https://vite.dev/config/
 
-
-
-
 export default defineConfig({
   plugins: [
     vue(),
@@ -20,11 +17,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('src', import.meta.url)),
     },
   },
-<<<<<<< HEAD
-})
-=======
-
-
   server: {
     proxy: {
       '/api': {
@@ -36,5 +28,3 @@ export default defineConfig({
     }
   }
 })
-
->>>>>>> 3446e20 (feat: add maps and add ai answer)
